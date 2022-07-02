@@ -1,0 +1,693 @@
+* {
+  font-family: var(--body-font-family);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--section-bg-color);
+}
+@media screen and (min-width: 1440px) {
+  section {
+    margin-top: 0 !important;
+    font-size: 2rem;
+  }
+  h1#sectiontitle {
+    font-size: 4rem;
+  }
+}
+/* START NAVBAR */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0px -13px 25px 0px;
+  color: var(--title-color);
+  font-weight: var(--font-weight-semibold);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar a:hover {
+  color: var(--dark-color);
+}
+.navbar img {
+  width: 20px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+#toggler,
+.navbar label {
+  display: none;
+}
+#logo1,
+#logo2 {
+  text-align: center;
+}
+#logo1 {
+  display: none;
+}
+span#logob {
+  color: var(--primary-color);
+  font-family: var(--body-font-family2);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--h6-font-size);
+}
+@media screen and (max-width: 725px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list {
+    background: #e0e0e0e0;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+  #logo1 {
+    display: block;
+  }
+  #logo2 {
+    display: none;
+  }
+  li {
+    width: 100%;
+    text-align: center;
+  }
+  li:hover {
+    border-bottom: solid;
+    animation: mov 500ms;
+  }
+  @keyframes mov {
+    0% {
+      width: 0;
+      color: #e0e0e0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navbar a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 2rem;
+  }
+  span#logob {
+    font-size: var(--h1-font-size);
+  }
+}
+/* End NAVBAR */
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+section {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 15%;
+}
+/*START SECTION HOME*/
+#sectiontitle {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  text-shadow: 0px 0px 4px var(--bs-gray-dark);
+}
+#home {
+  background: url(../images/home/doctor-s-hand-holding-stethoscope-closeup.jpg)
+    no-repeat;
+  height: 90vh;
+  display: grid;
+  justify-items: end;
+  align-items: end;
+  overflow: hidden;
+  background-size: cover;
+  margin-top: 0 !important;
+}
+.box {
+  width: 55%;
+  background: var(--section-bg-color);
+  padding: 0rem 3rem;
+  line-height: 3rem;
+  font-size: 24px;
+  padding-bottom: 1rem;
+}
+.box h1 span {
+  color: var(--bs-blue);
+}
+.box p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.5px;
+}
+span#addphone {
+  padding: 2%;
+  border-radius: 2px;
+  border: 1px solid var(--border-color);
+}
+span#addphone a {
+  text-decoration: none;
+  color: var(--bs-blue);
+}
+span#addphone:hover {
+  box-shadow: 0px 0px 5px 1px #000;
+}
+@media screen and (max-width: 725px) {
+  .container {
+    margin: 6%;
+  }
+  .box {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    background: #fff5f559;
+  }
+  .box p {
+    color: var(--dark-color);
+  }
+  div#boxtlf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .box {
+    height: 70%;
+    padding-top: 0;
+    display: grid;
+    align-items: start;
+    font-size: 2rem;
+  }
+  .box p {
+    font-size: 2rem;
+  }
+}
+/* END SECTION HOME */
+/*START SECTION ABOUT */
+.article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1%;
+  color: var(--bs-secondary);
+}
+#article {
+  width: 50%;
+  line-height: 2rem;
+}
+.exper {
+  width: 304px;
+  height: 304px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 0px 28px -9px;
+}
+.exper p {
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-semibold);
+}
+.exper span {
+  font-size: var(--p-extra-font-size);
+  color: var(--bs-primary);
+  font-family: var(--body-font-family2);
+}
+#article h1 {
+  font-size: var(--h1-font-size);
+  color: var(--bs-dark);
+  line-height: 1em;
+}
+article p {
+  text-indent: 20px;
+}
+@media screen and (max-width: 725px) {
+  .article {
+    flex-direction: column;
+    align-items: center;
+  }
+  #article {
+    width: 100%;
+    line-height: 2.5rem;
+    text-align: center;
+  }
+}
+.pict {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15%;
+}
+img#pict {
+  width: 46%;
+  height: 260px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 725px) {
+  .pict {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img#pict {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #article {
+    line-height: 4rem;
+  }
+  .exper {
+    width: 29%;
+    height: 33vh;
+  }
+  img#pict {
+    width: 45%;
+    height: auto;
+  }
+}
+/* END SECTION ABOUT */
+
+/* START SECTION TIMELINE*/
+.timebox,
+.timebox1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.timebox1 {
+  flex-direction: row-reverse;
+}
+.textbox {
+  width: 40%;
+  line-height: 2rem;
+  box-shadow: 0px 0px 18px -7px;
+  margin-left: 0.2%;
+  border-radius: 15px;
+}
+.timebox::before,
+.timebox1::before {
+  content: "";
+  position: absolute;
+  border-width: 17px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--dark-color);
+  left: 41.8%;
+}
+.timebox1::before {
+  border-color: transparent var(--dark-color) transparent transparent;
+  right: 41.8%;
+  left: 0;
+}
+.timeboxbef::after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  height: 40%;
+  background-color: #3333332b;
+  width: 1px;
+  z-index: 0;
+}
+.textbox h1 {
+  background: var(--dark-color);
+  color: var(--bs-light);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0;
+}
+.textbox p {
+  padding: 1rem;
+  padding-top: 0;
+  color: var(--p-color);
+}
+img#timepic {
+  width: 10%;
+  padding: 3%;
+  background: var(--bs-light);
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0px 0px 12px -6px var(--border-color);
+}
+.time {
+  width: 40%;
+}
+.timebox1 .time {
+  text-align: end;
+}
+@media screen and (max-width: 725px) {
+  .timebox,
+  .timebox1 {
+    margin-top: 20%;
+    flex-direction: row-reverse;
+  }
+  .textbox {
+    width: 60%;
+    text-align: center;
+  }
+  .time {
+    width: 25%;
+  }
+  img#timepic {
+    width: 10%;
+    padding: 1%;
+  }
+  .timeboxbef::after {
+    right: 65%;
+    height: 57%;
+  }
+  .timebox::before,
+  .timebox1::before {
+    content: "";
+    position: absolute;
+    border-width: 17px;
+    border-style: solid;
+    border-color: transparent #000 transparent transparent;
+    right: 57.3%;
+    left: 0%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .textbox {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .timebox::before,
+  .timebox1::before {
+    left: 42.1%;
+  }
+}
+/* END SECTION TIMELINE */
+/* START SECTION Patients */
+.patients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around !important;
+}
+.patient {
+  width: 43%;
+  background: var(--dark-color);
+  padding: 1rem 2rem;
+  margin-top: 4%;
+  border-radius: 2rem;
+  box-shadow: 2px 55px 29px -22px var(--bs-secondary);
+}
+.patientStarts {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+svg#svgw,
+svg#svg {
+  fill: var(--bs-gold);
+  width: 100%;
+  height: 40px;
+}
+svg#svg {
+  fill: var(--white-color);
+}
+.patients .patient h5 {
+  font-size: var(--h5-font-size);
+  color: var(--bs-blue);
+  margin: 1.5rem 1rem;
+}
+.patients .patient p {
+  text-indent: 1rem;
+  color: var(--bs-secondary);
+}
+.patientpic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.patientpic img {
+  width: 15%;
+  border-radius: 50%;
+  margin-right: 5%;
+}
+.patientpic h6 {
+  font-size: var(--h6-font-size);
+  color: var(--p-color);
+  font-weight: var(--font-weight-normal);
+}
+.patientpic span {
+  color: var(--white-color);
+  font-weight: var(--font-weight-semibold);
+}
+@media screen and (max-width: 725px) {
+  .patients {
+    flex-direction: column;
+    align-items: center;
+  }
+  .patient {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .patients {
+    justify-content: space-around;
+  }
+  .patient {
+    border-radius: 2rem;
+  }
+  svg#svgw,
+  svg#svg {
+    width: 10%;
+  }
+}
+/* END SECTION PATIENT */
+/* START SECTION BOOKING */
+form#booking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#booking input {
+  width: 45%;
+  height: 3rem;
+  margin: 2%;
+  color: var(--bs-secondary);
+  border: 0;
+  background: var(--section-bg-color);
+  border-bottom: 1px solid var(--bs-gray);
+  font-size: var(--font-size-large);
+  text-indent: 1rem;
+  border-radius: 10px;
+}
+textarea#text {
+  width: 90%;
+  height: 160px;
+  border: 0;
+  background: var(--section-bg-color);
+  border-bottom: 1px solid var(--bs-gray);
+  resize: none;
+  font-size: var(--font-size-large);
+  text-indent: 1rem;
+}
+input#submit {
+  background: var(--dark-color);
+  color: var(--bs-white);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--body-font-family2);
+  margin-top: 8%;
+  cursor: pointer;
+  transition: 300ms;
+  border-radius: 25px;
+}
+input#submit:hover {
+  background: var(--bs-primary);
+  transform: scale(90%, 90%);
+}
+#booking input:focus,
+textarea#text:focus {
+  outline: var(--bs-info) 3px solid;
+  border-radius: 10px;
+  transition: 200ms;
+}
+@media screen and (max-width: 725px) {
+  form#booking {
+    flex-direction: column;
+    align-items: center;
+  }
+  #booking input {
+    width: 90%;
+    text-align: center;
+  }
+  textarea#text {
+    width: 90%;
+    text-align: center;
+    height: 100px;
+  }
+  input#submit {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #booking input {
+    font-size: 6rem;
+  }
+  input#submit {
+    border-radius: 1rem !important;
+    font-size: 4rem !important;
+  }
+  #booking input {
+    height: 10vh;
+  }
+}
+/* END SECTION BOOKING */
+/* START FOOTER */
+footer#contact {
+  margin-top: 15%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 20px -20px 26px -29px var(--border-color);
+  line-height: 1.5rem;
+}
+.clinicHour {
+  width: 40%;
+}
+ul#clinicHour {
+  list-style: none;
+}
+#clinicHour li {
+  display: flex;
+  justify-content: space-between;
+  color: var(--bs-secondary);
+  margin-top: 5%;
+  border-bottom: 1px solid var(--border-color);
+  padding: 2%;
+  padding-left: 0;
+}
+#clinicHour li :last-child {
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-semibold);
+}
+.clinic {
+  width: 17%;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.clinic {
+  width: 21%;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.clinic p,
+.clinic a {
+  text-decoration: none;
+  color: var(--bs-secondary);
+}
+.clinic a:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 200ms;
+}
+.clinicsos {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--p-color);
+}
+.clinicsos h1 {
+  color: #000;
+}
+.resauso a svg {
+  width: 18%;
+  fill: var(--bs-secondary);
+  cursor: pointer;
+}
+.resauso a svg:hover {
+  fill: var(--bs-blue);
+}
+.resauso #redhover:hover {
+  fill: var(--bs-red);
+}
+
+@media screen and (max-width: 725px) {
+  footer#contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .clinic,
+  .clinicHour,
+  .clinicsos {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+  .resauso {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul#clinicHour {
+    padding: 3%;
+    width: 80%;
+  }
+  .resauso a svg {
+    width: 100%;
+  }
+  .resauso a {
+    margin: 4%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  footer#contact {
+    margin-top: 15%;
+  }
+  #contact h1 {
+    font-size: 4rem;
+    line-height: 62px;
+  }
+  #clinicHour li,
+  #clinicHour li :last-child {
+    font-size: 2rem;
+  }
+  #contact p {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+  .clinicsos {
+    height: 40vh;
+  }
+}
+/* END FOOTER */

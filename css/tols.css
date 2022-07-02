@@ -1,0 +1,35 @@
+:root {
+  --white-color: #ffffff;
+  --primary-color: #247cff;
+  --section-bg-color: #f9f9f9;
+  --dark-color: #000000;
+  --title-color: #565758;
+  --p-color: #717275;
+  --border-color: #9e9e9e;
+  --body-font-family: "Open Sans", sans-serif;
+  --body-font-family2: "MuseoModerno", cursive;
+  --h1-font-size: 48px;
+  --h3-font-size: 32px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --menu-font-size: 16px;
+  --p-extra-font-size: 8rem;
+  --font-size-large: larger;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 700;
+  --font-weight-bold: bolder;
+}
+:root {
+  --bs-blue: #0d6efd;
+  --bs-red: #dc3545;
+  --bs-white: #fff;
+  --bs-gray: #c9c7c7;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-info: #3abcd67a;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-gold: #ffd700;
+}
